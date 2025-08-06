@@ -14,6 +14,12 @@ public abstract class BaseEntity
         Id = Guid.NewGuid();
         CreatedAt = DateTime.UtcNow;
     }
+
+        public void SetUpdatedAt(DateTime updatedAt)
+    {
+        UpdatedAt = updatedAt;
+    }
+
     
     public void AddDomainEvent(IDomainEvent domainEvent)
     {
